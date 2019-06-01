@@ -4,7 +4,7 @@ This package exposes a function for converting [traditional hepburn romaji strin
 
 ## Restrictions
 
-This package was written in order to allow myself to write quick notes without switching keyboard layout when taking notes (but lather process these later).
+This package was written in order to allow myself to write quick notes without switching keyboard layout when taking notes (but rather process these later).
 Therefore, there's very little 'intelligence' in this package.
 For example, there's no grammatical inference of whether 'wa' is「は」or 「わ」.
 
@@ -27,7 +27,7 @@ tookyoo - とおきょお
 The package expects **hiragana to be all lower case** and **katakana to be all upper case**.
 
 ```
-toukyou - とうきょう
+Toukyou - error
 ```
 
 ## Usage
