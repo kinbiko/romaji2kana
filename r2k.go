@@ -36,9 +36,12 @@ func ToKana(in string) (string, error) {
 
 func sub(in string) (kana, error) {
 	var k kana
-	for l := 4; k.val == "" && l > 0; l-- {
+	for l := 5; k.val == "" && l > 0; l-- {
 		if len(in) >= l {
 			k = hiragana[in[len(in)-l:]]
+			if k.val == "" {
+				k = katakana[in[len(in)-l:]]
+			}
 		}
 	}
 	if k.val == "" {
