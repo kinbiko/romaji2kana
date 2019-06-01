@@ -46,6 +46,7 @@ func TestKatakana(t *testing.T) {
 		{in: "BAAGENSEERU", exp: "バーゲンセール"},
 		{in: "GURUDOBURANDOSEN", exp: "グルドブランドセン"},
 		{in: "PYUU", exp: "ピュー"},
+		{in: "TOUKYOU", exp: "トーキョー"},
 	}
 	for _, tc := range tt {
 		t.Run(tc.in, func(st *testing.T) {
