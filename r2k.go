@@ -152,13 +152,13 @@ func ToKana(in string) (string, error) {
 func sub(in string) (kana, error) {
 	var k kana
 	if len(in) >= 3 {
-		k = r2k[in[len(in)-3:len(in)]]
+		k = r2k[in[len(in)-3:]]
 	}
 	if k.val == "" && len(in) >= 2 {
-		k = r2k[in[len(in)-2:len(in)]]
+		k = r2k[in[len(in)-2:]]
 	}
 	if k.val == "" {
-		k = r2k[in[len(in)-1:len(in)]]
+		k = r2k[in[len(in)-1:]]
 	}
 	if k.val == "" {
 		return kana{}, fmt.Errorf("could not find right-most kana for '%s'", in)
