@@ -1,5 +1,12 @@
 # Romaji2Kana
 
+[![Build Status](https://travis-ci.com/kinbiko/romaji2kana.svg?branch=master)](https://travis-ci.com/kinbiko/romaji2kana)
+[![Go Report Card](https://goreportcard.com/badge/github.com/kinbiko/romaji2kana)](https://goreportcard.com/report/github.com/kinbiko/romaji2kana)
+[![Coverage Status](https://coveralls.io/repos/github/kinbiko/romaji2kana/badge.svg)](https://coveralls.io/github/kinbiko/romaji2kana)
+[![Latest version](https://img.shields.io/github/tag/kinbiko/romaji2kana.svg?label=latest%20version&style=flat)](https://github.com/kinbiko/romaji2kana/releases)
+[![Go Documentation](http://img.shields.io/badge/godoc-documentation-blue.svg?style=flat)](http://godoc.org/github.com/kinbiko/romaji2kana)
+[![License](https://img.shields.io/github/license/kinbiko/romaji2kana.svg?style=flat)](https://github.com/kinbiko/romaji2kana/blob/master/LICENSE)
+
 This package exposes a function for converting [traditional hepburn romaji strings](https://en.wikipedia.org/wiki/Hepburn_romanization) into kana.
 
 ## Restrictions
