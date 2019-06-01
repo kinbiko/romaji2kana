@@ -11,3 +11,9 @@ func ExampleToKana_hiragana() {
 	fmt.Println(s)
 	// output: ゆるしてやったらどうや
 }
+
+func ExampleToKana_katakana() {
+	s, _ := r2k.ToKana("HAPPIIBAASUDEI")
+	fmt.Println(s)
+	// output: ハッピーバースデー
+}

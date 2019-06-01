@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestSuccessCases(t *testing.T) {
+func TestHiragana(t *testing.T) {
 	tt := []struct{ exp, in string }{
 		{in: "", exp: ""},
 		{in: "a", exp: "あ"},
@@ -25,6 +25,27 @@ func TestSuccessCases(t *testing.T) {
 		{in: "massugu", exp: "まっすぐ"},
 		{in: "mettani", exp: "めったに"},
 		{in: "happyou", exp: "はっぴょう"},
+	}
+	for _, tc := range tt {
+		t.Run(tc.in, func(st *testing.T) {
+			got, err := romaji2kana.ToKana(tc.in)
+			if err != nil {
+				st.Fatalf("Unexpected error: %s", err.Error())
+			}
+			if tc.exp != got {
+				st.Fatalf("expected '%s' but got '%s'", tc.exp, got)
+			}
+		})
+	}
+}
+
+func TestKatakana(t *testing.T) {
+	tt := []struct{ exp, in string }{
+		{in: "A", exp: "ア"},
+		{in: "AKA", exp: "アカ"},
+		{in: "BAAGENSEERU", exp: "バーゲンセール"},
+		{in: "GURUDOBURANDOSEN", exp: "グルドブランドセン"},
+		{in: "PYUU", exp: "ピュー"},
 	}
 	for _, tc := range tt {
 		t.Run(tc.in, func(st *testing.T) {
