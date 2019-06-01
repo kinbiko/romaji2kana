@@ -21,6 +21,10 @@ func TestSuccessCases(t *testing.T) {
 		{in: "nandeyanen", exp: "なんでやねん"},
 		{in: "chuushajou", exp: "ちゅうしゃじょう"},
 		{in: "chottomatte", exp: "ちょっとまって"},
+		{in: "sakki", exp: "さっき"},
+		{in: "massugu", exp: "まっすぐ"},
+		{in: "mettani", exp: "めったに"},
+		{in: "happyou", exp: "はっぴょう"},
 	}
 	for _, tc := range tt {
 		t.Run(tc.in, func(st *testing.T) {
@@ -37,7 +41,8 @@ func TestSuccessCases(t *testing.T) {
 
 func TestNegativeCases(t *testing.T) {
 	tt := []struct{ exp, in string }{
-		{in: "fish", exp: "parse error: parsed up until '' when getting 'could not find right-most kana for 'fish''"},
+		{in: "fishu", exp: "parse error: parsed up until 'しゅい' when getting 'could not find right-most kana for 'f''"},
+		{in: "-", exp: "parse error: parsed up until '' when getting 'could not find right-most kana for '-''"},
 	}
 	for _, tc := range tt {
 		t.Run(tc.in, func(st *testing.T) {

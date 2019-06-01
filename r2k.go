@@ -129,7 +129,39 @@ var r2k = map[string]kana{
 	"ryu": {val: "りゅ", skip: 3},
 	"ryo": {val: "りょ", skip: 3},
 
-	"t": {val: "っ", skip: 1},
+	"t":    {val: "っ", skip: 1},
+	"kka":  {val: "っか", skip: 3},
+	"kki":  {val: "っき", skip: 3},
+	"kku":  {val: "っく", skip: 3},
+	"kke":  {val: "っけ", skip: 3},
+	"kko":  {val: "っこ", skip: 3},
+	"kkya": {val: "っきゃ", skip: 4},
+	"kkyu": {val: "っきゅ", skip: 4},
+	"kkyo": {val: "っきょ", skip: 4},
+	"ssa":  {val: "っさ", skip: 3},
+	"sshi": {val: "っし", skip: 4},
+	"ssu":  {val: "っす", skip: 3},
+	"sse":  {val: "っせ", skip: 3},
+	"sso":  {val: "っそ", skip: 3},
+	"ssha": {val: "っしゃ", skip: 4},
+	"sshu": {val: "っしゅ", skip: 4},
+	"ssho": {val: "っしょ", skip: 4},
+	"tta":  {val: "った", skip: 3},
+	"cchi": {val: "っち", skip: 4},
+	"ttsu": {val: "っつ", skip: 4},
+	"tte":  {val: "って", skip: 3},
+	"tto":  {val: "っと", skip: 3},
+	"ccha": {val: "っちゃ", skip: 4},
+	"cchu": {val: "っちゅ", skip: 4},
+	"ccho": {val: "っちょ", skip: 4},
+	"ppa":  {val: "っぱ", skip: 3},
+	"ppi":  {val: "っぴ", skip: 3},
+	"ppu":  {val: "っぷ", skip: 3},
+	"ppe":  {val: "っぺ", skip: 3},
+	"ppo":  {val: "っぽ", skip: 3},
+	"ppya": {val: "っぴゃ", skip: 4},
+	"ppyu": {val: "っぴゅ", skip: 4},
+	"ppyo": {val: "っぴょ", skip: 4},
 }
 
 //ToKana returns the kana equivalent of the given hepburn romaji string.
@@ -151,14 +183,10 @@ func ToKana(in string) (string, error) {
 
 func sub(in string) (kana, error) {
 	var k kana
-	if len(in) >= 3 {
-		k = r2k[in[len(in)-3:]]
-	}
-	if k.val == "" && len(in) >= 2 {
-		k = r2k[in[len(in)-2:]]
-	}
-	if k.val == "" {
-		k = r2k[in[len(in)-1:]]
+	for l := 4; k.val == "" && l > 0; l-- {
+		if len(in) >= l {
+			k = r2k[in[len(in)-l:len(in)]]
+		}
 	}
 	if k.val == "" {
 		return kana{}, fmt.Errorf("could not find right-most kana for '%s'", in)
