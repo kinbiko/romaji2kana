@@ -1,6 +1,6 @@
 package romaji2kana
 
-var r2k = map[string]kana{
+var hiragana = map[string]kana{
 
 	"a":   {val: "あ", skip: 1},
 	"i":   {val: "い", skip: 1},

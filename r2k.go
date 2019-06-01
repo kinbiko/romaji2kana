@@ -38,7 +38,7 @@ func sub(in string) (kana, error) {
 	var k kana
 	for l := 4; k.val == "" && l > 0; l-- {
 		if len(in) >= l {
-			k = r2k[in[len(in)-l:]]
+			k = hiragana[in[len(in)-l:]]
 		}
 	}
 	if k.val == "" {
