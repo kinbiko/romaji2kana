@@ -25,6 +25,7 @@ func TestHiragana(t *testing.T) {
 		{in: "massugu", exp: "まっすぐ"},
 		{in: "mettani", exp: "めったに"},
 		{in: "happyou", exp: "はっぴょう"},
+		{in: "joji", exp: "じょじ"},
 	}
 	for _, tc := range tt {
 		t.Run(tc.in, func(st *testing.T) {
