@@ -63,7 +63,7 @@ var hiragana = map[string]kana{
 	"ze":  {val: "ぜ", skip: 2},
 	"zo":  {val: "ぞ", skip: 2},
 	"da":  {val: "だ", skip: 2},
-	"di":  {val: "ぢ", skip: 3},
+	"di":  {val: "ぢ", skip: 2},
 	"dzu": {val: "づ", skip: 3},
 	"de":  {val: "で", skip: 2},
 	"do":  {val: "ど", skip: 2},
