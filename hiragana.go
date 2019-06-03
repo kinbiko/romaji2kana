@@ -97,7 +97,7 @@ var hiragana = map[string]kana{
 	"nyu": {val: "にゅ", skip: 3},
 	"nyo": {val: "にょ", skip: 3},
 	"hya": {val: "ひゃ", skip: 3},
-	"hyu": {val: "ひょ", skip: 3},
+	"hyu": {val: "ひゅ", skip: 3},
 	"hyo": {val: "ひょ", skip: 3},
 	"bya": {val: "びゃ", skip: 3},
 	"byu": {val: "びゅ", skip: 3},
