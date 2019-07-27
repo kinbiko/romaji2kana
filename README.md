@@ -7,6 +7,8 @@
 [![Go Documentation](http://img.shields.io/badge/godoc-documentation-blue.svg?style=flat)](http://godoc.org/github.com/kinbiko/romaji2kana)
 [![License](https://img.shields.io/github/license/kinbiko/romaji2kana.svg?style=flat)](https://github.com/kinbiko/romaji2kana/blob/master/LICENSE)
 
+> **This repository is now deprecated in favour of [nihon-go](https://github.com/kinbiko/nihon-go), which contains a function to achieve the same behaviour, and more.**
+
 This package exposes a `ToKana` function for converting romaji strings into kana.
 
 ## Restrictions
